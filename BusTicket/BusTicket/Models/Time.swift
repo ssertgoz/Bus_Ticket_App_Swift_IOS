@@ -8,6 +8,11 @@
 import Foundation
 
 struct Time{
-    let hour : Int = 0
-    let minute : Int = 0
+    var hour : Int = 0
+    var minute : Int = 0
+    
+    init(hour : Int = 0, minute : Int = 0){
+        self.hour = hour
+        self.minute = minute
+    }
 }

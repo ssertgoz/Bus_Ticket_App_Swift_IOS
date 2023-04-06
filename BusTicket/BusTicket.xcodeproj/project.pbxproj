@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		755B57D729DB7596007E4318 /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755B57D629DB7596007E4318 /* TicketsViewController.swift */; };
+		755B57D729DB7596007E4318 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755B57D629DB7596007E4318 /* TripsViewController.swift */; };
 		7579ECC829DC9410003FA849 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7579ECC729DC9410003FA849 /* LoginViewController.swift */; };
 		7579ECCA29DC9BCA003FA849 /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7579ECC929DC9BCA003FA849 /* ChooseViewController.swift */; };
 		7582FE4629D8E327002AF6FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7582FE4529D8E327002AF6FB /* AppDelegate.swift */; };
@@ -26,6 +26,8 @@
 		75B0BAE829DD8E0700970E23 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B0BAE729DD8E0700970E23 /* Date.swift */; };
 		75B0BAEA29DD8EB900970E23 /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B0BAE929DD8EB900970E23 /* Passenger.swift */; };
 		75B0BAEC29DD8F2600970E23 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B0BAEB29DD8F2600970E23 /* Ticket.swift */; };
+		75B0BAEF29DEA8B000970E23 /* TripsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B0BAEE29DEA8B000970E23 /* TripsCollectionViewCell.swift */; };
+		75B0BAF129DEBE3C00970E23 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B0BAF029DEBE3C00970E23 /* Trip.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,7 +47,7 @@
 /* Begin PBXFileReference section */
 		1D4E771E79C5B0B0FDCA2DA8 /* Pods-BusTicket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusTicket.release.xcconfig"; path = "Target Support Files/Pods-BusTicket/Pods-BusTicket.release.xcconfig"; sourceTree = "<group>"; };
 		59A85B2E8243FCE2518D8A12 /* Pods_BusTicket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BusTicket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		755B57D629DB7596007E4318 /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
+		755B57D629DB7596007E4318 /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		7576C23929DC919800213434 /* BusTicket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusTicket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7579ECC729DC9410003FA849 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7579ECC929DC9BCA003FA849 /* ChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +67,8 @@
 		75B0BAE729DD8E0700970E23 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		75B0BAE929DD8EB900970E23 /* Passenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passenger.swift; sourceTree = "<group>"; };
 		75B0BAEB29DD8F2600970E23 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
+		75B0BAEE29DEA8B000970E23 /* TripsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsCollectionViewCell.swift; sourceTree = "<group>"; };
+		75B0BAF029DEBE3C00970E23 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		E3F5505A4403665CBDBA30C3 /* Pods-BusTicket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusTicket.debug.xcconfig"; path = "Target Support Files/Pods-BusTicket/Pods-BusTicket.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +119,7 @@
 				75B0BAE729DD8E0700970E23 /* Date.swift */,
 				75B0BAE929DD8EB900970E23 /* Passenger.swift */,
 				75B0BAEB29DD8F2600970E23 /* Ticket.swift */,
+				75B0BAF029DEBE3C00970E23 /* Trip.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 		7582FE5A29D8E59B002AF6FB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				75B0BAED29DEA87900970E23 /* Trips */,
 				7582FE5C29D8EAA9002AF6FB /* Onboarding */,
 			);
 			path = Views;
@@ -132,7 +138,7 @@
 			children = (
 				7582FE6129D8F729002AF6FB /* OnboardingViewController.swift */,
 				758D861929DA36C000A529CF /* TabBarController.swift */,
-				755B57D629DB7596007E4318 /* TicketsViewController.swift */,
+				755B57D629DB7596007E4318 /* TripsViewController.swift */,
 				7579ECC729DC9410003FA849 /* LoginViewController.swift */,
 				7579ECC929DC9BCA003FA849 /* ChooseViewController.swift */,
 			);
@@ -145,6 +151,14 @@
 				7582FE5D29D8F5F8002AF6FB /* OnboardingCollectionViewCell.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		75B0BAED29DEA87900970E23 /* Trips */ = {
+			isa = PBXGroup;
+			children = (
+				75B0BAEE29DEA8B000970E23 /* TripsCollectionViewCell.swift */,
+			);
+			path = Trips;
 			sourceTree = "<group>";
 		};
 		8143EFB581162509B4A12B5B /* Frameworks */ = {
@@ -285,13 +299,15 @@
 				7582FE6029D8F63C002AF6FB /* OnboardingSlide.swift in Sources */,
 				75B0BAEA29DD8EB900970E23 /* Passenger.swift in Sources */,
 				75B0BAE629DD8DB600970E23 /* Time.swift in Sources */,
+				75B0BAF129DEBE3C00970E23 /* Trip.swift in Sources */,
 				7582FE6229D8F729002AF6FB /* OnboardingViewController.swift in Sources */,
 				75B0BAEC29DD8F2600970E23 /* Ticket.swift in Sources */,
 				7579ECCA29DC9BCA003FA849 /* ChooseViewController.swift in Sources */,
 				7582FE4A29D8E327002AF6FB /* ViewController.swift in Sources */,
+				75B0BAEF29DEA8B000970E23 /* TripsCollectionViewCell.swift in Sources */,
 				7582FE4629D8E327002AF6FB /* AppDelegate.swift in Sources */,
 				75B0BAE829DD8E0700970E23 /* Date.swift in Sources */,
-				755B57D729DB7596007E4318 /* TicketsViewController.swift in Sources */,
+				755B57D729DB7596007E4318 /* TripsViewController.swift in Sources */,
 				758D861A29DA36C000A529CF /* TabBarController.swift in Sources */,
 				7582FE4829D8E327002AF6FB /* SceneDelegate.swift in Sources */,
 				7582FE5E29D8F5F8002AF6FB /* OnboardingCollectionViewCell.swift in Sources */,
