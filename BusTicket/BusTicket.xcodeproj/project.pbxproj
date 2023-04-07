@@ -28,6 +28,9 @@
 		75B0BAEC29DD8F2600970E23 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B0BAEB29DD8F2600970E23 /* Ticket.swift */; };
 		75B0BAEF29DEA8B000970E23 /* TripsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B0BAEE29DEA8B000970E23 /* TripsCollectionViewCell.swift */; };
 		75B0BAF129DEBE3C00970E23 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B0BAF029DEBE3C00970E23 /* Trip.swift */; };
+		75E0958629DF805400B2FCCA /* MockSeatCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E0958529DF805400B2FCCA /* MockSeatCreator.swift */; };
+		75E0958829DF80D500B2FCCA /* SearDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E0958729DF80D500B2FCCA /* SearDataManager.swift */; };
+		75E0958A29E0C5A000B2FCCA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E0958929E0C5A000B2FCCA /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -69,6 +72,9 @@
 		75B0BAEB29DD8F2600970E23 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		75B0BAEE29DEA8B000970E23 /* TripsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsCollectionViewCell.swift; sourceTree = "<group>"; };
 		75B0BAF029DEBE3C00970E23 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		75E0958529DF805400B2FCCA /* MockSeatCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSeatCreator.swift; sourceTree = "<group>"; };
+		75E0958729DF80D500B2FCCA /* SearDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearDataManager.swift; sourceTree = "<group>"; };
+		75E0958929E0C5A000B2FCCA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E3F5505A4403665CBDBA30C3 /* Pods-BusTicket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusTicket.debug.xcconfig"; path = "Target Support Files/Pods-BusTicket/Pods-BusTicket.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +103,7 @@
 		7582FE4429D8E327002AF6FB /* BusTicket */ = {
 			isa = PBXGroup;
 			children = (
+				75E0958929E0C5A000B2FCCA /* Extensions.swift */,
 				7582FE5B29D8E5AD002AF6FB /* Controllers */,
 				7582FE5A29D8E59B002AF6FB /* Views */,
 				7582FE5929D8E3B9002AF6FB /* Models */,
@@ -120,6 +127,8 @@
 				75B0BAE929DD8EB900970E23 /* Passenger.swift */,
 				75B0BAEB29DD8F2600970E23 /* Ticket.swift */,
 				75B0BAF029DEBE3C00970E23 /* Trip.swift */,
+				75E0958529DF805400B2FCCA /* MockSeatCreator.swift */,
+				75E0958729DF80D500B2FCCA /* SearDataManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -295,11 +304,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75E0958829DF80D500B2FCCA /* SearDataManager.swift in Sources */,
 				7579ECC829DC9410003FA849 /* LoginViewController.swift in Sources */,
 				7582FE6029D8F63C002AF6FB /* OnboardingSlide.swift in Sources */,
 				75B0BAEA29DD8EB900970E23 /* Passenger.swift in Sources */,
 				75B0BAE629DD8DB600970E23 /* Time.swift in Sources */,
+				75E0958629DF805400B2FCCA /* MockSeatCreator.swift in Sources */,
 				75B0BAF129DEBE3C00970E23 /* Trip.swift in Sources */,
+				75E0958A29E0C5A000B2FCCA /* Extensions.swift in Sources */,
 				7582FE6229D8F729002AF6FB /* OnboardingViewController.swift in Sources */,
 				75B0BAEC29DD8F2600970E23 /* Ticket.swift in Sources */,
 				7579ECCA29DC9BCA003FA849 /* ChooseViewController.swift in Sources */,

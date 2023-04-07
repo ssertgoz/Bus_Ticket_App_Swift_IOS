@@ -20,14 +20,14 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0 - 710ce174434baf23"
+                  uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0 - 73388bfc5d268fae"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BusTicket.ChooseViewController.fromTextField.getter : Swift.Optional&lt;__C.UITextField&gt;"
+                  symbolName = "BusTicket.ChooseViewController.findTicketsButton.getter : Swift.Optional&lt;__C.UIButton&gt;"
                   moduleName = "BusTicket"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/serdar/PersonalProjects/Turkkcell_GYGY_SWIFT/Homeworks%20to%20evaluate/BusTicket/BusTicket/Controllers/ChooseViewController.swift"
+                  urlString = "file:///Users/serdar/PersonalProjects/Bus_Ticket_App_Swift_IOS/BusTicket/BusTicket/Controllers/ChooseViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -35,14 +35,14 @@
                   offsetFromSymbolStart = "88">
                </Location>
                <Location
-                  uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0 - 5f6120f57b35db2f"
+                  uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0 - 8ab33f028caf5fb2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BusTicket.ChooseViewController.fromTextField.setter : Swift.Optional&lt;__C.UITextField&gt;"
+                  symbolName = "BusTicket.ChooseViewController.findTicketsButton.setter : Swift.Optional&lt;__C.UIButton&gt;"
                   moduleName = "BusTicket"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/serdar/PersonalProjects/Turkkcell_GYGY_SWIFT/Homeworks%20to%20evaluate/BusTicket/BusTicket/Controllers/ChooseViewController.swift"
+                  urlString = "file:///Users/serdar/PersonalProjects/Bus_Ticket_App_Swift_IOS/BusTicket/BusTicket/Controllers/ChooseViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -50,14 +50,14 @@
                   offsetFromSymbolStart = "108">
                </Location>
                <Location
-                  uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0 - 336ceb2b2be7141e"
+                  uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0 - ff798283b04e63ad"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BusTicket.ChooseViewController.fromTextField.modify : Swift.Optional&lt;__C.UITextField&gt;"
+                  symbolName = "BusTicket.ChooseViewController.findTicketsButton.modify : Swift.Optional&lt;__C.UIButton&gt;"
                   moduleName = "BusTicket"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/serdar/PersonalProjects/Turkkcell_GYGY_SWIFT/Homeworks%20to%20evaluate/BusTicket/BusTicket/Controllers/ChooseViewController.swift"
+                  urlString = "file:///Users/serdar/PersonalProjects/Bus_Ticket_App_Swift_IOS/BusTicket/BusTicket/Controllers/ChooseViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -65,14 +65,14 @@
                   offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0 - 7dd94559c26fc758"
+                  uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0 - 3ad23e2308bfd994"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BusTicket.ChooseViewController.fromTextField.modify : Swift.Optional&lt;__C.UITextField&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  symbolName = "BusTicket.ChooseViewController.findTicketsButton.modify : Swift.Optional&lt;__C.UIButton&gt; with unmangled suffix &quot;.resume.0&quot;"
                   moduleName = "BusTicket"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/serdar/PersonalProjects/Turkkcell_GYGY_SWIFT/Homeworks%20to%20evaluate/BusTicket/BusTicket/Controllers/ChooseViewController.swift"
+                  urlString = "file:///Users/serdar/PersonalProjects/Bus_Ticket_App_Swift_IOS/BusTicket/BusTicket/Controllers/ChooseViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -80,34 +80,34 @@
                   offsetFromSymbolStart = "28">
                </Location>
                <Location
-                  uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0 - 1bd4c539c4003b90"
+                  uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0 - 6f5bf8188eeafdf6"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "BusTicket.ChooseViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; BusTicket.ChooseViewController"
                   moduleName = "BusTicket"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/serdar/PersonalProjects/Turkkcell_GYGY_SWIFT/Homeworks%20to%20evaluate/BusTicket/BusTicket/Controllers/ChooseViewController.swift"
+                  urlString = "file:///Users/serdar/PersonalProjects/Bus_Ticket_App_Swift_IOS/BusTicket/BusTicket/Controllers/ChooseViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
                   endingLineNumber = "13"
-                  offsetFromSymbolStart = "112">
+                  offsetFromSymbolStart = "128">
                </Location>
                <Location
-                  uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0 - 142103712e32589b"
+                  uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0 - 60ae3e5064d89efd"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "BusTicket.ChooseViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;BusTicket.ChooseViewController&gt;"
                   moduleName = "BusTicket"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/serdar/PersonalProjects/Turkkcell_GYGY_SWIFT/Homeworks%20to%20evaluate/BusTicket/BusTicket/Controllers/ChooseViewController.swift"
+                  urlString = "file:///Users/serdar/PersonalProjects/Bus_Ticket_App_Swift_IOS/BusTicket/BusTicket/Controllers/ChooseViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
                   endingLineNumber = "13"
-                  offsetFromSymbolStart = "88">
+                  offsetFromSymbolStart = "104">
                </Location>
             </Locations>
          </BreakpointContent>

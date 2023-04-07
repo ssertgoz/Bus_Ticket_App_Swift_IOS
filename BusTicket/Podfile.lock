@@ -1,16 +1,20 @@
 PODS:
+  - ALBusSeatView (0.2.5)
   - iOSDropDown (0.4.0)
 
 DEPENDENCIES:
+  - ALBusSeatView
   - iOSDropDown
 
 SPEC REPOS:
   trunk:
+    - ALBusSeatView
     - iOSDropDown
 
 SPEC CHECKSUMS:
+  ALBusSeatView: 5416cf8e3d0d8d993da5f726f92cbb425463efd2
   iOSDropDown: ce9daa584eaa5567cafc1b633e3cc7eb6d9cea42
 
-PODFILE CHECKSUM: da1abbef9b2abb57044f6477146de1babb474e37
+PODFILE CHECKSUM: 02dd2e506c04903c861ce852468f893960ac6d36
 
 COCOAPODS: 1.11.3

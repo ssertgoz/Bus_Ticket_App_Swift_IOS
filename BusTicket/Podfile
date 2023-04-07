@@ -6,7 +6,7 @@ target 'BusTicket' do
 use_frameworks!
 
   # Pods for BusTicket
-  # pod 'ALBusSeatView'
+  pod 'ALBusSeatView'
   pod 'iOSDropDown'
   #pod 'DropDown'
 end
