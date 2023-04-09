@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 class OnboardingViewController: UIViewController {
     
@@ -27,14 +28,15 @@ class OnboardingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         configureCollectionView()
         let image1 = UIImage(named: "slidePic1")!
         let image2 = UIImage(named: "slidePic2")!
         let image3 = UIImage(named: "slidePic3")!
         slides = [
-            OnboardingSlide(title: "Find Correct News", descripton: "Right Location of News", image: image1),
-            OnboardingSlide(title: "Look", descripton: "Discuss With Others", image:  image2),
-            OnboardingSlide(title: "Announce", descripton: "Make people to hear your news", image:  image3)
+            OnboardingSlide(title: "Welcome to our Bus Ticket Booking App", descripton: "Book your bus tickets in just a few clicks and travel hassle-free.", image: image1,animationName: "lotti1"),
+            OnboardingSlide(title: "Environmentally Friendly Ticketing", descripton: "Our ticketing system is designed to reduce paper waste and minimize our carbon footprint. ", image:  image2,animationName: "lotti2"),
+            OnboardingSlide(title: "Customer Service at Its Finest", descripton: "At SwiftPass, we believe that exceptional customer service is the key to a great experience. Our dedicated team is available 24/7 to answer any questions", image:  image3,animationName: "lotti3")
 
         ]
         
@@ -49,6 +51,13 @@ class OnboardingViewController: UIViewController {
 //        collectionView.delegate = self
 //        collectionView.dataSource = self
     }
+    @IBAction func skipButtonClicked(_ sender: Any) {
+        let contrller = storyboard?.instantiateViewController(withIdentifier: "LoginNC") as! UINavigationController
+        contrller.modalPresentationStyle = .fullScreen
+        contrller.modalTransitionStyle = .flipHorizontal
+        present(contrller, animated: true)
+    }
+    
     @IBAction func nextButtonClicked(_ sender: UIButton) {
         if(currentPage == slides.count-1){
             let contrller = storyboard?.instantiateViewController(withIdentifier: "LoginNC") as! UINavigationController
@@ -73,7 +82,6 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print("burada")
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! OnboardingCollectionViewCell
         
         cell.setup( slides[indexPath.row])

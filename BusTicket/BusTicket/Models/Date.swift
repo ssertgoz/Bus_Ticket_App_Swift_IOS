@@ -12,4 +12,8 @@ struct Date{
     let day : Int = 1
     let month : Int = 1
     let year : Int = 2024
+    
+    func getDate() -> String{
+        return "\(self.day)/\(self.month)/\(self.year)"
+    }
 }

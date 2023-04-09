@@ -6,10 +6,10 @@
 //
 
 import Foundation
-
+import UIKit
 import ALBusSeatView
 
-class SeatDataManager {
+class SeatDataManager : UIAlertController{
     var seatList = [[SeatStub]]()
     var selectedSeatlist = [SeatStub]()
 }
@@ -20,11 +20,23 @@ extension SeatDataManager: ALBusSeatViewDelegate {
     func seatView(_ seatView: ALBusSeatView,
                   didSelectAtIndex indexPath: IndexPath,
                   seatType: ALBusSeatType, selectionType: ALSelectionType) {
+        if(selectedSeatlist.count == 5){
+            let alertController = UIAlertController(title: "Merhaba", message: "Dünya", preferredStyle: .alert)
+
+            let okAction = UIAlertAction(title: "Tamam", style: .default) { _ in
+                // Burada "Tamam" düğmesine tıklandığında yapılacak işlemleri belirtebilirsiniz.
+            }
+
+            alertController.addAction(okAction)
+
+            present(alertController, animated: true, completion: nil)
+        }else{
+            var stub = seatList[indexPath.section][indexPath.item]
+            stub.gender = selectionType == .man ? true : false
+            selectedSeatlist.append(stub)
+            seatView.reload()
+        }
         
-        var stub = seatList[indexPath.section][indexPath.item]
-        stub.gender = selectionType == .man ? true : false
-        selectedSeatlist.append(stub)
-        seatView.reload()
     }
     
     func seatView(_ seatView: ALBusSeatView,

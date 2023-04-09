@@ -11,4 +11,5 @@ struct OnboardingSlide{
     let title : String
     let descripton : String
     let image : UIImage
+    let animationName : String
 }

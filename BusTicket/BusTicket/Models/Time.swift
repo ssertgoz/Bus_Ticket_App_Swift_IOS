@@ -15,4 +15,8 @@ struct Time{
         self.hour = hour
         self.minute = minute
     }
+    
+    func getTime() -> String{
+        return "\(self.hour):\(self.minute)"
+    }
 }

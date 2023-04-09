@@ -38,7 +38,7 @@ public protocol ALBusSeatViewDataSource {
 
 
 /// This protocol represents the display and behaviour of the seatView.
-public protocol ALBusSeatViewDelegate: class {
+public protocol ALBusSeatViewDelegate: AnyObject {
     
     /// Asks the delegate if the specified seat should be selected
     /// - Parameters:
@@ -198,7 +198,6 @@ public class ALBusSeatView: UIView {
         
         // Drive position setup
         if config.leftHandDrivePosition == true {
-            print("leftHand active")
             let layout = ALBusLeftHandDriveLayout()
             layout.scrollDirection = .horizontal
             collectionView.collectionViewLayout = layout
@@ -342,6 +341,7 @@ extension ALBusSeatView:  UICollectionViewDelegate, UICollectionViewDataSource, 
     
     public func collectionView(_ collectionView: UICollectionView,
                                didSelectItemAt indexPath: IndexPath) {
+        
         
         collectionView.deselectItem(at: indexPath, animated: false)
         

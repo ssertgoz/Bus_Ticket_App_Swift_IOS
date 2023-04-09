@@ -23,4 +23,8 @@ struct Ticket{
     func compareTickets(tiket : Ticket) -> Bool{
         return true
     }
+    
+    func getSeatsAsString() -> String{
+        return self.seats!.map{ String($0) }.joined(separator: ", ")
+    }
 }

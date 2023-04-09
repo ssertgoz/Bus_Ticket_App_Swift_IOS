@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7521BDBD29E2794700EEB689 /* lotti1.json in Resources */ = {isa = PBXBuildFile; fileRef = 7521BDBA29E2794700EEB689 /* lotti1.json */; };
+		7521BDBE29E2794700EEB689 /* lotti2.json in Resources */ = {isa = PBXBuildFile; fileRef = 7521BDBB29E2794700EEB689 /* lotti2.json */; };
+		7521BDBF29E2794700EEB689 /* lotti3.json in Resources */ = {isa = PBXBuildFile; fileRef = 7521BDBC29E2794700EEB689 /* lotti3.json */; };
+		752A365929E31F1D000D22E1 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752A365829E31F1D000D22E1 /* TabBarViewController.swift */; };
 		755B57D729DB7596007E4318 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755B57D629DB7596007E4318 /* TripsViewController.swift */; };
 		7579ECC829DC9410003FA849 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7579ECC729DC9410003FA849 /* LoginViewController.swift */; };
 		7579ECCA29DC9BCA003FA849 /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7579ECC929DC9BCA003FA849 /* ChooseViewController.swift */; };
@@ -21,7 +25,10 @@
 		7582FE6229D8F729002AF6FB /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7582FE6129D8F729002AF6FB /* OnboardingViewController.swift */; };
 		758B532029DCAFFD002BAEC9 /* Pods_BusTicket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59A85B2E8243FCE2518D8A12 /* Pods_BusTicket.framework */; };
 		758B532129DCAFFD002BAEC9 /* Pods_BusTicket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 59A85B2E8243FCE2518D8A12 /* Pods_BusTicket.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		758D861A29DA36C000A529CF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758D861929DA36C000A529CF /* TabBarController.swift */; };
+		75A74B9429E1DACA003931F0 /* BuyTicketUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A74B9329E1DACA003931F0 /* BuyTicketUIViewController.swift */; };
+		75A74B9629E23D9A003931F0 /* MyTicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A74B9529E23D9A003931F0 /* MyTicketsViewController.swift */; };
+		75A74B9929E23E8A003931F0 /* MyTicketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A74B9829E23E8A003931F0 /* MyTicketCollectionViewCell.swift */; };
+		75A74B9B29E24E96003931F0 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A74B9A29E24E96003931F0 /* Enums.swift */; };
 		75B0BAE629DD8DB600970E23 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B0BAE529DD8DB600970E23 /* Time.swift */; };
 		75B0BAE829DD8E0700970E23 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B0BAE729DD8E0700970E23 /* Date.swift */; };
 		75B0BAEA29DD8EB900970E23 /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B0BAE929DD8EB900970E23 /* Passenger.swift */; };
@@ -29,8 +36,9 @@
 		75B0BAEF29DEA8B000970E23 /* TripsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B0BAEE29DEA8B000970E23 /* TripsCollectionViewCell.swift */; };
 		75B0BAF129DEBE3C00970E23 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B0BAF029DEBE3C00970E23 /* Trip.swift */; };
 		75E0958629DF805400B2FCCA /* MockSeatCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E0958529DF805400B2FCCA /* MockSeatCreator.swift */; };
-		75E0958829DF80D500B2FCCA /* SearDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E0958729DF80D500B2FCCA /* SearDataManager.swift */; };
+		75E0958829DF80D500B2FCCA /* SeatDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E0958729DF80D500B2FCCA /* SeatDataManager.swift */; };
 		75E0958A29E0C5A000B2FCCA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E0958929E0C5A000B2FCCA /* Extensions.swift */; };
+		75E4555429E32AFB00B0D0A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E4555329E32AFB00B0D0A1 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,6 +58,10 @@
 /* Begin PBXFileReference section */
 		1D4E771E79C5B0B0FDCA2DA8 /* Pods-BusTicket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusTicket.release.xcconfig"; path = "Target Support Files/Pods-BusTicket/Pods-BusTicket.release.xcconfig"; sourceTree = "<group>"; };
 		59A85B2E8243FCE2518D8A12 /* Pods_BusTicket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BusTicket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7521BDBA29E2794700EEB689 /* lotti1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lotti1.json; sourceTree = "<group>"; };
+		7521BDBB29E2794700EEB689 /* lotti2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lotti2.json; sourceTree = "<group>"; };
+		7521BDBC29E2794700EEB689 /* lotti3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lotti3.json; sourceTree = "<group>"; };
+		752A365829E31F1D000D22E1 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		755B57D629DB7596007E4318 /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		7576C23929DC919800213434 /* BusTicket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusTicket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7579ECC729DC9410003FA849 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -65,7 +77,10 @@
 		7582FE5F29D8F63C002AF6FB /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		7582FE6129D8F729002AF6FB /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		758B532229DCB073002BAEC9 /* DropDown */ = {isa = PBXFileReference; lastKnownFileType = folder; name = DropDown; path = Pods/DropDown; sourceTree = "<group>"; };
-		758D861929DA36C000A529CF /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		75A74B9329E1DACA003931F0 /* BuyTicketUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTicketUIViewController.swift; sourceTree = "<group>"; };
+		75A74B9529E23D9A003931F0 /* MyTicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsViewController.swift; sourceTree = "<group>"; };
+		75A74B9829E23E8A003931F0 /* MyTicketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketCollectionViewCell.swift; sourceTree = "<group>"; };
+		75A74B9A29E24E96003931F0 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		75B0BAE529DD8DB600970E23 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		75B0BAE729DD8E0700970E23 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		75B0BAE929DD8EB900970E23 /* Passenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passenger.swift; sourceTree = "<group>"; };
@@ -73,8 +88,9 @@
 		75B0BAEE29DEA8B000970E23 /* TripsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsCollectionViewCell.swift; sourceTree = "<group>"; };
 		75B0BAF029DEBE3C00970E23 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		75E0958529DF805400B2FCCA /* MockSeatCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSeatCreator.swift; sourceTree = "<group>"; };
-		75E0958729DF80D500B2FCCA /* SearDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearDataManager.swift; sourceTree = "<group>"; };
+		75E0958729DF80D500B2FCCA /* SeatDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatDataManager.swift; sourceTree = "<group>"; };
 		75E0958929E0C5A000B2FCCA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		75E4555329E32AFB00B0D0A1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E3F5505A4403665CBDBA30C3 /* Pods-BusTicket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusTicket.debug.xcconfig"; path = "Target Support Files/Pods-BusTicket/Pods-BusTicket.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +109,9 @@
 		7582FE3929D8E327002AF6FB = {
 			isa = PBXGroup;
 			children = (
+				7521BDBA29E2794700EEB689 /* lotti1.json */,
+				7521BDBB29E2794700EEB689 /* lotti2.json */,
+				7521BDBC29E2794700EEB689 /* lotti3.json */,
 				7582FE4429D8E327002AF6FB /* BusTicket */,
 				7576C23929DC919800213434 /* BusTicket.app */,
 				F5C6432902ADA661B4EF2EF2 /* Pods */,
@@ -104,6 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				75E0958929E0C5A000B2FCCA /* Extensions.swift */,
+				75A74B9A29E24E96003931F0 /* Enums.swift */,
+				75E4555329E32AFB00B0D0A1 /* Constants.swift */,
 				7582FE5B29D8E5AD002AF6FB /* Controllers */,
 				7582FE5A29D8E59B002AF6FB /* Views */,
 				7582FE5929D8E3B9002AF6FB /* Models */,
@@ -128,7 +149,7 @@
 				75B0BAEB29DD8F2600970E23 /* Ticket.swift */,
 				75B0BAF029DEBE3C00970E23 /* Trip.swift */,
 				75E0958529DF805400B2FCCA /* MockSeatCreator.swift */,
-				75E0958729DF80D500B2FCCA /* SearDataManager.swift */,
+				75E0958729DF80D500B2FCCA /* SeatDataManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -136,6 +157,7 @@
 		7582FE5A29D8E59B002AF6FB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				75A74B9729E23E62003931F0 /* MyTickets */,
 				75B0BAED29DEA87900970E23 /* Trips */,
 				7582FE5C29D8EAA9002AF6FB /* Onboarding */,
 			);
@@ -146,10 +168,12 @@
 			isa = PBXGroup;
 			children = (
 				7582FE6129D8F729002AF6FB /* OnboardingViewController.swift */,
-				758D861929DA36C000A529CF /* TabBarController.swift */,
 				755B57D629DB7596007E4318 /* TripsViewController.swift */,
 				7579ECC729DC9410003FA849 /* LoginViewController.swift */,
 				7579ECC929DC9BCA003FA849 /* ChooseViewController.swift */,
+				75A74B9329E1DACA003931F0 /* BuyTicketUIViewController.swift */,
+				75A74B9529E23D9A003931F0 /* MyTicketsViewController.swift */,
+				752A365829E31F1D000D22E1 /* TabBarViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -160,6 +184,14 @@
 				7582FE5D29D8F5F8002AF6FB /* OnboardingCollectionViewCell.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		75A74B9729E23E62003931F0 /* MyTickets */ = {
+			isa = PBXGroup;
+			children = (
+				75A74B9829E23E8A003931F0 /* MyTicketCollectionViewCell.swift */,
+			);
+			path = MyTickets;
 			sourceTree = "<group>";
 		};
 		75B0BAED29DEA87900970E23 /* Trips */ = {
@@ -249,7 +281,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7521BDBF29E2794700EEB689 /* lotti3.json in Resources */,
+				7521BDBD29E2794700EEB689 /* lotti1.json in Resources */,
 				7582FE5229D8E328002AF6FB /* LaunchScreen.storyboard in Resources */,
+				7521BDBE29E2794700EEB689 /* lotti2.json in Resources */,
 				7582FE4F29D8E328002AF6FB /* Assets.xcassets in Resources */,
 				7582FE4D29D8E327002AF6FB /* Main.storyboard in Resources */,
 			);
@@ -304,25 +339,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75E0958829DF80D500B2FCCA /* SearDataManager.swift in Sources */,
+				75E0958829DF80D500B2FCCA /* SeatDataManager.swift in Sources */,
 				7579ECC829DC9410003FA849 /* LoginViewController.swift in Sources */,
 				7582FE6029D8F63C002AF6FB /* OnboardingSlide.swift in Sources */,
 				75B0BAEA29DD8EB900970E23 /* Passenger.swift in Sources */,
 				75B0BAE629DD8DB600970E23 /* Time.swift in Sources */,
+				75A74B9629E23D9A003931F0 /* MyTicketsViewController.swift in Sources */,
 				75E0958629DF805400B2FCCA /* MockSeatCreator.swift in Sources */,
 				75B0BAF129DEBE3C00970E23 /* Trip.swift in Sources */,
+				75A74B9929E23E8A003931F0 /* MyTicketCollectionViewCell.swift in Sources */,
+				75A74B9B29E24E96003931F0 /* Enums.swift in Sources */,
+				75A74B9429E1DACA003931F0 /* BuyTicketUIViewController.swift in Sources */,
 				75E0958A29E0C5A000B2FCCA /* Extensions.swift in Sources */,
 				7582FE6229D8F729002AF6FB /* OnboardingViewController.swift in Sources */,
 				75B0BAEC29DD8F2600970E23 /* Ticket.swift in Sources */,
 				7579ECCA29DC9BCA003FA849 /* ChooseViewController.swift in Sources */,
+				752A365929E31F1D000D22E1 /* TabBarViewController.swift in Sources */,
 				7582FE4A29D8E327002AF6FB /* ViewController.swift in Sources */,
 				75B0BAEF29DEA8B000970E23 /* TripsCollectionViewCell.swift in Sources */,
 				7582FE4629D8E327002AF6FB /* AppDelegate.swift in Sources */,
 				75B0BAE829DD8E0700970E23 /* Date.swift in Sources */,
 				755B57D729DB7596007E4318 /* TripsViewController.swift in Sources */,
-				758D861A29DA36C000A529CF /* TabBarController.swift in Sources */,
 				7582FE4829D8E327002AF6FB /* SceneDelegate.swift in Sources */,
 				7582FE5E29D8F5F8002AF6FB /* OnboardingCollectionViewCell.swift in Sources */,
+				75E4555429E32AFB00B0D0A1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

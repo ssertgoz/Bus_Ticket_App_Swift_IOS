@@ -8,5 +8,6 @@ use_frameworks!
   # Pods for BusTicket
   pod 'ALBusSeatView'
   pod 'iOSDropDown'
+  pod 'lottie-ios'
   #pod 'DropDown'
 end

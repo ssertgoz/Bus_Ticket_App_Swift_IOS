@@ -56,11 +56,11 @@ class ALSelectionTooltip: UIView {
         let button = ALSelectionTooltipButton()
         button.tag = 0
         
-        let img = UIImage(podAssetName: "iconWomanSelection")
+        let img = UIImage(podAssetName: "women")
         
         button.setBackgroundImage(img,
                                   for: .normal)
-        
+
         button.addTarget(self, action: #selector(buttonTapped(button:)),
                          for: .touchUpInside)
         return button
@@ -69,7 +69,7 @@ class ALSelectionTooltip: UIView {
     private lazy var rightButton: UIButton = {
         let button = ALSelectionTooltipButton()
         button.tag = 1
-        button.setBackgroundImage(UIImage(podAssetName: "iconManSelection"),
+        button.setBackgroundImage(UIImage(podAssetName: "boss2"),
                                   for: .normal)
         button.addTarget(self, action: #selector(buttonTapped(button:)),
                          for: .touchUpInside)
@@ -131,6 +131,7 @@ class ALSelectionTooltip: UIView {
     
     @IBAction func buttonTapped(button: UIButton) {
         let type: ALSelectionType = button.tag == 0 ? .woman : .man
+        
         selectionHandler?(type)
     }
     

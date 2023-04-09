@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-BusTicket/Pods-BusTicket-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/ALBusSeatView/ALBusSeatView.framework
 ${BUILT_PRODUCTS_DIR}/iOSDropDown/iOSDropDown.framework
+${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework
