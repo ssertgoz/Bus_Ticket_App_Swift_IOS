@@ -31,7 +31,6 @@ extension MyTicketsViewController: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print("burada")
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myTicketCell", for: indexPath) as! MyTicketCollectionViewCell
         
         cell.setup( tickets[indexPath.row])

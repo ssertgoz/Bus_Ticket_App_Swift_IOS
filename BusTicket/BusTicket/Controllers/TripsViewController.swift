@@ -13,6 +13,9 @@ class TripsViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var rightButton: UIButton!
+    @IBOutlet weak var middleButton: UIButton!
+    @IBOutlet weak var leftButton: UIButton!
     var collectionView2 : UICollectionView!
     
     var trips : [Trip] = []
@@ -20,14 +23,24 @@ class TripsViewController: UIViewController {
     var selectedIndexPath: IndexPath?
     var alertController : UIAlertController?
     
+    var fromCity : String?
+    var toCity : String?
+    var day : Int?
+    var month : Int?
+    var year : Int?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(onDataReceived(_:)), name: Notification.Name("DataReceived"), object: nil)
+
         
-        
-        //collectionView.delegate = self
-//        collectionView.dataSource = self
+        rightButton.layer.cornerRadius = 10
+        rightButton.layer.masksToBounds = true
+        middleButton.layer.cornerRadius = 10
+        middleButton.layer.masksToBounds = true
+        leftButton.layer.cornerRadius = 10
+        leftButton.layer.masksToBounds = true
 
         trips = [
             Trip(time: Time(hour : 1, minute : 30), duration: Time(hour : 1, minute : 30), destination: "Amerika", fromWhere: "İzmir", price: 50, image: CompanyImages.alanyalilar.getRoundedImage()!, company: "Pamukkale"),
@@ -38,10 +51,29 @@ class TripsViewController: UIViewController {
             Trip(time: Time(hour : 1, minute : 30), duration: Time(hour : 1, minute : 30), destination: "Amerika", fromWhere: "İzmir", price: 50, image: CompanyImages.varan.getRoundedImage()!, company: "Pamukkale"),
             Trip(time: Time(hour : 1, minute : 30), duration: Time(hour : 1, minute : 30), destination: "Amerika", fromWhere: "İzmir", price: 50, image: CompanyImages.metro.getRoundedImage()!, company: "Pamukkale")
         ]
-       
+        
         
     }
+    
+    @objc func onDataReceived(_ notification: Notification) {
+        if let data = notification.userInfo?["data"] as? String {
+            print("Received data: \(data)")
+        }
+        //guard let viewControllerName = notification.userInfo?["viewController"] as? String else { return }
+        
+        
+    }
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("DataReceived"), object: nil)
+    }
 
+    @IBAction func onMiddleButtonClicked(_ sender: Any) {
+    }
+    @IBAction func onLeftButtonClicked(_ sender: Any) {
+    }
+    @IBAction func onRightButtonClicked(_ sender: Any) {
+    }
+    
     @IBAction func onBuyTicketButtonClicked(_ sender: Any) {
         print("test")
     }
@@ -82,9 +114,19 @@ extension TripsViewController: UICollectionViewDelegateFlowLayout , UICollection
              cell.layer.shadowOpacity = 0.5
              cell.layer.shadowRadius = 5
              cell.layer.masksToBounds = false
+             
+             cell.totalPriceLabel.isHidden = false
              cell.seatView.isHidden = false
+             cell.numberOfSeatToBuyLabel.isHidden =  false
+             cell.continouButton.isHidden = false
+             cell.staticTotalPrice.isHidden = false
          } else {
+             cell.totalPriceLabel.isHidden = true
              cell.seatView.isHidden = true
+             cell.numberOfSeatToBuyLabel.isHidden =  true
+             cell.continouButton.isHidden = true
+             cell.staticTotalPrice.isHidden = true
+             
              cell.layer.shadowOpacity = 0
              cell.layer.masksToBounds = false
          }

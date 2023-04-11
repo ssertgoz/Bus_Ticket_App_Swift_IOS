@@ -10,6 +10,7 @@
 		7521BDBD29E2794700EEB689 /* lotti1.json in Resources */ = {isa = PBXBuildFile; fileRef = 7521BDBA29E2794700EEB689 /* lotti1.json */; };
 		7521BDBE29E2794700EEB689 /* lotti2.json in Resources */ = {isa = PBXBuildFile; fileRef = 7521BDBB29E2794700EEB689 /* lotti2.json */; };
 		7521BDBF29E2794700EEB689 /* lotti3.json in Resources */ = {isa = PBXBuildFile; fileRef = 7521BDBC29E2794700EEB689 /* lotti3.json */; };
+		7529258029E3A0B100D3F67E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7529257F29E3A0B100D3F67E /* ProfileViewController.swift */; };
 		752A365929E31F1D000D22E1 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752A365829E31F1D000D22E1 /* TabBarViewController.swift */; };
 		755B57D729DB7596007E4318 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755B57D629DB7596007E4318 /* TripsViewController.swift */; };
 		7579ECC829DC9410003FA849 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7579ECC729DC9410003FA849 /* LoginViewController.swift */; };
@@ -39,6 +40,8 @@
 		75E0958829DF80D500B2FCCA /* SeatDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E0958729DF80D500B2FCCA /* SeatDataManager.swift */; };
 		75E0958A29E0C5A000B2FCCA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E0958929E0C5A000B2FCCA /* Extensions.swift */; };
 		75E4555429E32AFB00B0D0A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E4555329E32AFB00B0D0A1 /* Constants.swift */; };
+		75E4555629E35C5B00B0D0A1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E4555529E35C5B00B0D0A1 /* SignUpViewController.swift */; };
+		75E4555929E35E4400B0D0A1 /* UserDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75E4555729E35E4400B0D0A1 /* UserDataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,6 +64,7 @@
 		7521BDBA29E2794700EEB689 /* lotti1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lotti1.json; sourceTree = "<group>"; };
 		7521BDBB29E2794700EEB689 /* lotti2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lotti2.json; sourceTree = "<group>"; };
 		7521BDBC29E2794700EEB689 /* lotti3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lotti3.json; sourceTree = "<group>"; };
+		7529257F29E3A0B100D3F67E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		752A365829E31F1D000D22E1 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		755B57D629DB7596007E4318 /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		7576C23929DC919800213434 /* BusTicket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusTicket.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +95,8 @@
 		75E0958729DF80D500B2FCCA /* SeatDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatDataManager.swift; sourceTree = "<group>"; };
 		75E0958929E0C5A000B2FCCA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		75E4555329E32AFB00B0D0A1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		75E4555529E35C5B00B0D0A1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		75E4555829E35E4400B0D0A1 /* UserDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserDataModel.xcdatamodel; sourceTree = "<group>"; };
 		E3F5505A4403665CBDBA30C3 /* Pods-BusTicket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusTicket.debug.xcconfig"; path = "Target Support Files/Pods-BusTicket/Pods-BusTicket.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +141,7 @@
 				7582FE4E29D8E328002AF6FB /* Assets.xcassets */,
 				7582FE5029D8E328002AF6FB /* LaunchScreen.storyboard */,
 				7582FE5329D8E328002AF6FB /* Info.plist */,
+				75E4555729E35E4400B0D0A1 /* UserDataModel.xcdatamodeld */,
 			);
 			path = BusTicket;
 			sourceTree = "<group>";
@@ -174,6 +181,8 @@
 				75A74B9329E1DACA003931F0 /* BuyTicketUIViewController.swift */,
 				75A74B9529E23D9A003931F0 /* MyTicketsViewController.swift */,
 				752A365829E31F1D000D22E1 /* TabBarViewController.swift */,
+				75E4555529E35C5B00B0D0A1 /* SignUpViewController.swift */,
+				7529257F29E3A0B100D3F67E /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -343,9 +352,12 @@
 				7579ECC829DC9410003FA849 /* LoginViewController.swift in Sources */,
 				7582FE6029D8F63C002AF6FB /* OnboardingSlide.swift in Sources */,
 				75B0BAEA29DD8EB900970E23 /* Passenger.swift in Sources */,
+				75E4555629E35C5B00B0D0A1 /* SignUpViewController.swift in Sources */,
 				75B0BAE629DD8DB600970E23 /* Time.swift in Sources */,
+				7529258029E3A0B100D3F67E /* ProfileViewController.swift in Sources */,
 				75A74B9629E23D9A003931F0 /* MyTicketsViewController.swift in Sources */,
 				75E0958629DF805400B2FCCA /* MockSeatCreator.swift in Sources */,
+				75E4555929E35E4400B0D0A1 /* UserDataModel.xcdatamodeld in Sources */,
 				75B0BAF129DEBE3C00970E23 /* Trip.swift in Sources */,
 				75A74B9929E23E8A003931F0 /* MyTicketCollectionViewCell.swift in Sources */,
 				75A74B9B29E24E96003931F0 /* Enums.swift in Sources */,
@@ -580,6 +592,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		75E4555729E35E4400B0D0A1 /* UserDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				75E4555829E35E4400B0D0A1 /* UserDataModel.xcdatamodel */,
+			);
+			currentVersion = 75E4555829E35E4400B0D0A1 /* UserDataModel.xcdatamodel */;
+			path = UserDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7582FE3A29D8E327002AF6FB /* Project object */;
 }

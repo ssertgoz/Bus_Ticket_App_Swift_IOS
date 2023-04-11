@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BusTicket/Controllers/ChooseViewController.swift"
@@ -20,11 +20,11 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0 - 73388bfc5d268fae"
+                  uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0 - 4b53ba0b3908efa3"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BusTicket.ChooseViewController.findTicketsButton.getter : Swift.Optional&lt;__C.UIButton&gt;"
+                  symbolName = "BusTicket.ChooseViewController.fromLabel.getter : Swift.Optional&lt;__C.UILabel&gt;"
                   moduleName = "BusTicket"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/serdar/PersonalProjects/Bus_Ticket_App_Swift_IOS/BusTicket/BusTicket/Controllers/ChooseViewController.swift"
@@ -35,11 +35,11 @@
                   offsetFromSymbolStart = "88">
                </Location>
                <Location
-                  uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0 - 8ab33f028caf5fb2"
+                  uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0 - 51c6363b556fc3b7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BusTicket.ChooseViewController.findTicketsButton.setter : Swift.Optional&lt;__C.UIButton&gt;"
+                  symbolName = "BusTicket.ChooseViewController.fromLabel.setter : Swift.Optional&lt;__C.UILabel&gt;"
                   moduleName = "BusTicket"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/serdar/PersonalProjects/Bus_Ticket_App_Swift_IOS/BusTicket/BusTicket/Controllers/ChooseViewController.swift"
@@ -50,11 +50,11 @@
                   offsetFromSymbolStart = "108">
                </Location>
                <Location
-                  uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0 - ff798283b04e63ad"
+                  uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0 - 2ff2c75e602924a6"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BusTicket.ChooseViewController.findTicketsButton.modify : Swift.Optional&lt;__C.UIButton&gt;"
+                  symbolName = "BusTicket.ChooseViewController.fromLabel.modify : Swift.Optional&lt;__C.UILabel&gt;"
                   moduleName = "BusTicket"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/serdar/PersonalProjects/Bus_Ticket_App_Swift_IOS/BusTicket/BusTicket/Controllers/ChooseViewController.swift"
@@ -65,11 +65,11 @@
                   offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0 - 3ad23e2308bfd994"
+                  uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0 - ff5cdd1afbba893e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BusTicket.ChooseViewController.findTicketsButton.modify : Swift.Optional&lt;__C.UIButton&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  symbolName = "BusTicket.ChooseViewController.fromLabel.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
                   moduleName = "BusTicket"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/serdar/PersonalProjects/Bus_Ticket_App_Swift_IOS/BusTicket/BusTicket/Controllers/ChooseViewController.swift"
@@ -92,7 +92,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
                   endingLineNumber = "13"
-                  offsetFromSymbolStart = "128">
+                  offsetFromSymbolStart = "184">
                </Location>
                <Location
                   uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0 - 60ae3e5064d89efd"
@@ -107,7 +107,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
                   endingLineNumber = "13"
-                  offsetFromSymbolStart = "104">
+                  offsetFromSymbolStart = "160">
                </Location>
             </Locations>
          </BreakpointContent>

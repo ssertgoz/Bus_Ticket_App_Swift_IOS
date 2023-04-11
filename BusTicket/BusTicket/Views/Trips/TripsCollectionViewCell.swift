@@ -12,6 +12,8 @@ class TripsCollectionViewCell: UICollectionViewCell {
     
     static let identifier = String(describing: TripsCollectionViewCell.self)
     
+    @IBOutlet weak var continouButton: UIButton!
+    @IBOutlet weak var staticTotalPrice: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
@@ -25,6 +27,8 @@ class TripsCollectionViewCell: UICollectionViewCell {
 
     func setup(_ ticket:Trip){
         price = ticket.price
+        continouButton.layer.cornerRadius = 10
+        continouButton.layer.masksToBounds = true
         imageView.image = ticket.image
         totalPriceLabel.text = "\(String(selectedSeatlist.count*price))$"
         numberOfSeatToBuyLabel.text = "\(String(selectedSeatlist.count))X\(String(price))"

@@ -11,14 +11,20 @@ class TabBarViewController: UITabBarController {
 
     @IBOutlet weak var tabBarView: UITabBar!
     
-    
+    var fromCity : String?
+    var toCity : String?
+    var day : Int?
+    var month : Int?
+    var year : Int?
     override func viewDidLoad() {
         super.viewDidLoad()
+
 
         
         
     }
-    
+  
+
 
 
 }
