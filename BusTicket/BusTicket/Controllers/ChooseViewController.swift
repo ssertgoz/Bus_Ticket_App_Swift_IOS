@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import iOSDropDown
 
 class ChooseViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -27,34 +26,23 @@ class ChooseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
     
     var isFromButtonClicked : Bool = false
     
+    var isOkeyToFindTickets = false
+    
     let cities = ["Adana", "Adıyaman", "Afyonkarahisar", "Ağrı", "Aksaray", "Amasya", "Ankara", "Antalya", "Ardahan", "Artvin", "Aydın", "Balıkesir", "Bartın", "Batman", "Bayburt", "Bilecik", "Bingöl", "Bitlis", "Bolu", "Burdur", "Bursa", "Çanakkale", "Çankırı", "Çorum", "Denizli", "Diyarbakır", "Düzce", "Edirne", "Elazığ", "Erzincan", "Erzurum", "Eskişehir", "Gaziantep", "Giresun", "Gümüşhane", "Hakkâri", "Hatay", "Iğdır", "Isparta", "İstanbul", "İzmir", "Kahramanmaraş", "Karabük", "Karaman", "Kars", "Kastamonu", "Kayseri", "Kırıkkale", "Kırklareli", "Kırşehir", "Kilis", "Kocaeli", "Konya", "Kütahya", "Malatya", "Manisa", "Mardin", "Mersin", "Muğla", "Muş", "Nevşehir", "Niğde", "Ordu", "Osmaniye", "Rize", "Sakarya", "Samsun", "Siirt", "Sinop", "Sivas", "Şanlıurfa", "Şırnak", "Tekirdağ", "Tokat", "Trabzon", "Tunceli", "Uşak", "Van", "Yalova", "Yozgat", "Zonguldak"]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        NotificationCenter.default.addObserver(self, selector: #selector(onDataReceived(_:)), name: Notification.Name("DataReceived"), object: nil)
+        navigationItem.hidesBackButton = true
         datePic.minimumDate = .now
+        
+
         configureDropDowns()
         
         // Do any additional setup after loading the view.
     }
     
-    @objc func onDataReceived(_ notification: Notification) {
-        if let data = notification.userInfo?["data"] as? String {
-            print("Received data: \(data)")
-        }
-        //guard let viewControllerName = notification.userInfo?["viewController"] as? String else { return }
-        
-        
-    }
     
-    @objc func viewControllerChanged(notification: NSNotification) {
-          guard let viewControllerName = notification.userInfo?["viewController"] as? String else { return }
-          
-          if viewControllerName == "FirstViewController" {
-              print("FirstViewController'e geçildi")
-          }
-      }
     
     
     
@@ -158,24 +146,17 @@ class ChooseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
     @IBAction func toButtonClicked(_ sender: Any) {
         self.subView.isHidden = false
         self.city1PickerView.isHidden = false
+        isFromButtonClicked = false
     }
     
     
     @IBAction func onClicked(_ sender: UIButton) {
+        
         // İF dışındakini kaldır
-        let contrller = storyboard?.instantiateViewController(withIdentifier: "TabbarNC") as! UITabBarController
-        contrller.modalPresentationStyle = .fullScreen
-        let dataToSend = "Hello, world!"
-        let userInfo = ["data": dataToSend]
-        NotificationCenter.default.post(name: Notification.Name("DataReceived"), object: nil, userInfo: userInfo)
-        present(contrller, animated: true)
-//        if(choosenToCity != nil && choosenFromCity != nil){
-//            let contrller = storyboard?.instantiateViewController(withIdentifier: "TabbarNC") as! UITabBarController
-//            contrller.modalPresentationStyle = .fullScreen
-//            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ViewControllerChanged"), object: nil, userInfo: ["viewController": "TripsViewController"])
-//            present(contrller, animated: true)
-//
-//        }
+
+        if(choosenToCity == nil || choosenFromCity == nil){
+            showAlert(with: "You should choose city", title: "Error")
+        }
     }
     
     @IBAction func onDateChanged(_ sender: Any) {
@@ -196,18 +177,42 @@ class ChooseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
         present(alert, animated: true, completion: nil)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let calendar = Calendar.current
         if segue.identifier == "showSecondViewControllerSegue" {
-            if let navController = segue.destination as? UINavigationController, let secondViewController = navController.topViewController as? SecondViewController {
-                tripsViewController.fromCity = choosenFromCity
-                tripsViewController.toCity = choosenToCity
-                tripsViewController.day = calendar.component(.day, from: datePic.date)
-                tripsViewController.month = calendar.component(.month, from: datePic.date)
-                tripsViewController.year = calendar.component(.year, from: datePic.date)
+            
+            if let tabBarController = segue.destination as? TabBarViewController{
+                tabBarController.fromCity = choosenFromCity
+                tabBarController.toCity = choosenToCity
+                tabBarController.day = calendar.component(.day, from: datePic.date)
+                tabBarController.month = calendar.component(.month, from: datePic.date)
+                tabBarController.year = calendar.component(.year, from: datePic.date)
 
             }
         }
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "showSecondViewControllerSegue"{
+            if(isOkeyToFindTickets){
+                return true
+            }
+        }
+        return false
+    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let calendar = Calendar.current
+//
+//        if segue.identifier == "ShowTabbar" {
+//            if let tripsViewController = segue.destination as? TabBarViewController {
+//                tripsViewController.fromCity = choosenFromCity
+//                tripsViewController.toCity = choosenToCity
+//                tripsViewController.day = calendar.component(.day, from: datePic.date)
+//                tripsViewController.month = calendar.component(.month, from: datePic.date)
+//                tripsViewController.year = calendar.component(.year, from: datePic.date)
+//            }
+//        }
+//    }
     
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -216,6 +221,10 @@ class ChooseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
             choosenFromCity = cities[row]
         }else{
             choosenToCity = cities[row]
+        }
+        
+        if(choosenToCity != nil && choosenFromCity != nil){
+            isOkeyToFindTickets = true
         }
     }
     // Number of columns in each picker view

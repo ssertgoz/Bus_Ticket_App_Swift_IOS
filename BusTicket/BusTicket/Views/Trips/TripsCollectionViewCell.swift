@@ -50,10 +50,12 @@ class TripsCollectionViewCell: UICollectionViewCell {
         
         
         let mock = MockSeatCreater()
-        let first = mock.create(count: 44)
+        let first = mock.create(count: 47)
         seatList = [first]
         seatView?.reload()
     }
+    
+    
 
     //    override func prepareForReuse() {
 //            super.prepareForReuse()
@@ -104,6 +106,9 @@ extension TripsCollectionViewCell: ALBusSeatViewDelegate{
             self.selectedSeatlist.append(stub)
             totalPriceLabel.text = "\(String(selectedSeatlist.count*price))$"
             numberOfSeatToBuyLabel.text = "\(String(selectedSeatlist.count))X\(String(price))"
+            let dataToSend = ["\(String(selectedSeatlist.count*price))$",selectedSeatlist.map{String(($0).number)}.joined(separator: ", ")]
+            let userInfo = ["data": dataToSend]
+            NotificationCenter.default.post(name: Notification.Name("DataReceived"), object: nil, userInfo: userInfo)
             seatView.reload()
         }
         
@@ -117,6 +122,9 @@ extension TripsCollectionViewCell: ALBusSeatViewDelegate{
         self.selectedSeatlist.removeAll(where: { $0.id == stub.id })
         totalPriceLabel.text = "\(String(selectedSeatlist.count*price))$"
         numberOfSeatToBuyLabel.text = "\(String(selectedSeatlist.count))X\(String(price))"
+        let dataToSend = ["\(String(selectedSeatlist.count*price))$",selectedSeatlist.map{String(($0).number)}.joined(separator: ", ")]
+        let userInfo = ["data": dataToSend]
+        NotificationCenter.default.post(name: Notification.Name("DataReceived"), object: nil, userInfo: userInfo)
         seatView.reload()
     }
 }

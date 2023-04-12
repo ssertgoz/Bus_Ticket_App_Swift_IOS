@@ -16,14 +16,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(onDataReceived(_:)), name: Notification.Name("DataReceived"), object: nil)
         // Do any additional setup after loading the view.
     }
     
-    @objc func onDataReceived(_ notification: Notification) {
-       
-        
-    }
+    
     
     @IBAction func loginButton(_ sender: Any) {
         loginButton.layer.cornerRadius = 10
@@ -64,6 +60,7 @@ class LoginViewController: UIViewController {
             }
         }
     }
+   
     func showAlert(with message: String, title: String) {
         let alert = UIAlertController(title: title,
                                       message: message,

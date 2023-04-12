@@ -13,6 +13,8 @@
 		7529258029E3A0B100D3F67E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7529257F29E3A0B100D3F67E /* ProfileViewController.swift */; };
 		752A365929E31F1D000D22E1 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752A365829E31F1D000D22E1 /* TabBarViewController.swift */; };
 		755B57D729DB7596007E4318 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755B57D629DB7596007E4318 /* TripsViewController.swift */; };
+		755B59FE29E6137600092846 /* done.json in Resources */ = {isa = PBXBuildFile; fileRef = 755B59FD29E6137600092846 /* done.json */; };
+		755B5A0029E647AB00092846 /* empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 755B59FF29E647AB00092846 /* empty.json */; };
 		7579ECC829DC9410003FA849 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7579ECC729DC9410003FA849 /* LoginViewController.swift */; };
 		7579ECCA29DC9BCA003FA849 /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7579ECC929DC9BCA003FA849 /* ChooseViewController.swift */; };
 		7582FE4629D8E327002AF6FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7582FE4529D8E327002AF6FB /* AppDelegate.swift */; };
@@ -67,6 +69,8 @@
 		7529257F29E3A0B100D3F67E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		752A365829E31F1D000D22E1 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		755B57D629DB7596007E4318 /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
+		755B59FD29E6137600092846 /* done.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = done.json; sourceTree = "<group>"; };
+		755B59FF29E647AB00092846 /* empty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = empty.json; sourceTree = "<group>"; };
 		7576C23929DC919800213434 /* BusTicket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusTicket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7579ECC729DC9410003FA849 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7579ECC929DC9BCA003FA849 /* ChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 				7521BDBA29E2794700EEB689 /* lotti1.json */,
 				7521BDBB29E2794700EEB689 /* lotti2.json */,
 				7521BDBC29E2794700EEB689 /* lotti3.json */,
+				755B59FD29E6137600092846 /* done.json */,
+				755B59FF29E647AB00092846 /* empty.json */,
 				7582FE4429D8E327002AF6FB /* BusTicket */,
 				7576C23929DC919800213434 /* BusTicket.app */,
 				F5C6432902ADA661B4EF2EF2 /* Pods */,
@@ -290,10 +296,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				755B59FE29E6137600092846 /* done.json in Resources */,
 				7521BDBF29E2794700EEB689 /* lotti3.json in Resources */,
 				7521BDBD29E2794700EEB689 /* lotti1.json in Resources */,
 				7582FE5229D8E328002AF6FB /* LaunchScreen.storyboard in Resources */,
 				7521BDBE29E2794700EEB689 /* lotti2.json in Resources */,
+				755B5A0029E647AB00092846 /* empty.json in Resources */,
 				7582FE4F29D8E328002AF6FB /* Assets.xcassets in Resources */,
 				7582FE4D29D8E327002AF6FB /* Main.storyboard in Resources */,
 			);

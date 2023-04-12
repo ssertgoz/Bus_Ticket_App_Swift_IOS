@@ -28,3 +28,15 @@ struct Ticket{
         return self.seats!.map{ String($0) }.joined(separator: ", ")
     }
 }
+
+struct TicketDataBase{
+    var name : String
+    var seatNumbers: String
+    var userId: String
+    var date: String
+    var time: String
+    var totalPrice: String
+    var fromCity: String
+    var toCity: String
+    var companyImage: String
+}

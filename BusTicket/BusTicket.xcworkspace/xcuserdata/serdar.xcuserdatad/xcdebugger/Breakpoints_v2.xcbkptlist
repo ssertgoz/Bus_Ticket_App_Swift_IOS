@@ -23,15 +23,31 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D11B359A-2F2D-4177-9BCF-A68164B294FC"
+            uuid = "F802C172-F5F1-4FF0-9851-E529ADE2EFBA"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BusTicket/Controllers/TripsViewController.swift"
+            filePath = "BusTicket/Controllers/ChooseViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3B747ADA-6080-4D61-85BE-BDFD0F1105F8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BusTicket/Controllers/TabBarViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -39,17 +55,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FEA3ED5E-D95A-448E-A0CE-BB8250174903"
-            shouldBeEnabled = "Yes"
+            uuid = "355725E7-63C1-4EDF-B25F-A21E1605D7C1"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BusTicket/Controllers/TripsViewController.swift"
+            filePath = "BusTicket/Controllers/TabBarViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "onDataReceived(_:)"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "355725E7-63C1-4EDF-B25F-A21E1605D7C1 - b077fbd2fbbc9c3e"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BusTicket.TabBarViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "BusTicket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/serdar/PersonalProjects/Bus_Ticket_App_Swift_IOS/BusTicket/BusTicket/Controllers/TabBarViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "700">
+               </Location>
+               <Location
+                  uuid = "355725E7-63C1-4EDF-B25F-A21E1605D7C1 - b077fbd2fbbc9c3e"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BusTicket.TabBarViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "BusTicket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/serdar/PersonalProjects/Bus_Ticket_App_Swift_IOS/BusTicket/BusTicket/Controllers/TabBarViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "864">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

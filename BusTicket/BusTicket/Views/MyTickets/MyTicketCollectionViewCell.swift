@@ -16,16 +16,18 @@ class MyTicketCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var seatsLabel: UILabel!
     @IBOutlet weak var toLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var companyImage: UIImageView!
     
-    func setup(_ ticket:Ticket){
-        nameLabel.text = "\(ticket.passenger!.name) \(ticket.passenger!.surname)"
-        companyImage.image = ticket.image
-        fromLabel.text = ticket.fromWhere
-        toLabel.text = ticket.destination
-        passengerID.text = "\(String(describing: ticket.passenger?.id))"
-        timeLabel.text = ticket.time.getTime()
-        dateLabel.text = ticket.date.getDate()
-        seatsLabel.text = ticket.getSeatsAsString()
+    func setup(_ ticket:TicketDataBase){
+        
+        nameLabel.text = "\(ticket.name)"
+        companyImage.image = UIImage(named: ticket.companyImage)
+        fromLabel.text = ticket.fromCity
+        toLabel.text = ticket.toCity
+        passengerID.text = ticket.userId
+        timeLabel.text = ticket.time
+        dateLabel.text = ticket.date
+        seatsLabel.text = ticket.seatNumbers
     }
 }

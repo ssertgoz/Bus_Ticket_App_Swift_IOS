@@ -14,14 +14,14 @@
             filePath = "BusTicket/Controllers/ChooseViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
             landmarkName = "ChooseViewController"
             landmarkType = "3">
             <Locations>
                <Location
                   uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0 - 4b53ba0b3908efa3"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "BusTicket.ChooseViewController.fromLabel.getter : Swift.Optional&lt;__C.UILabel&gt;"
@@ -36,7 +36,7 @@
                </Location>
                <Location
                   uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0 - 51c6363b556fc3b7"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "BusTicket.ChooseViewController.fromLabel.setter : Swift.Optional&lt;__C.UILabel&gt;"
@@ -51,7 +51,7 @@
                </Location>
                <Location
                   uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0 - 2ff2c75e602924a6"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "BusTicket.ChooseViewController.fromLabel.modify : Swift.Optional&lt;__C.UILabel&gt;"
@@ -66,7 +66,7 @@
                </Location>
                <Location
                   uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0 - ff5cdd1afbba893e"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "BusTicket.ChooseViewController.fromLabel.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
@@ -81,7 +81,7 @@
                </Location>
                <Location
                   uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0 - 6f5bf8188eeafdf6"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "BusTicket.ChooseViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; BusTicket.ChooseViewController"
@@ -96,7 +96,7 @@
                </Location>
                <Location
                   uuid = "10DA9D15-FE69-46B5-9867-5076B241F5E0 - 60ae3e5064d89efd"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "BusTicket.ChooseViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;BusTicket.ChooseViewController&gt;"
