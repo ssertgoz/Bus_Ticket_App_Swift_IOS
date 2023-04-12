@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ProfileViewController: UIViewController {
 
@@ -21,6 +22,7 @@ class ProfileViewController: UIViewController {
     }
     
     func configure(){
+        usernameLabel.text = getUsername()
         visualEffectView.layer.cornerRadius = 20
         visualEffectView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         visualEffectView.clipsToBounds = true
@@ -49,5 +51,23 @@ class ProfileViewController: UIViewController {
         contrller.modalTransitionStyle = .coverVertical
         present(contrller, animated: true)
     }
+    
+    func getUsername() -> String? {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return nil
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        do {
+            let result = try managedContext.fetch(fetchRequest)
+            if let user = result.first as? User {
+                return user.username
+            }
+        } catch let error as NSError {
+            print("Fetch error: \(error), \(error.userInfo)")
+        }
+        return nil
+    }
+
     
 }
