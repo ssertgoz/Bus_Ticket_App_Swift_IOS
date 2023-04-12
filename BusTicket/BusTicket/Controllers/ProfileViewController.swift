@@ -15,10 +15,10 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-        // Do any additional setup after loading the view.
     }
     
     func configure(){
@@ -45,13 +45,32 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func onLogoutButtonClicked(_ sender: Any) {
-        dismiss(animated: false)
-        let contrller = storyboard?.instantiateViewController(withIdentifier: "LoginNC") as! UINavigationController
-        contrller.modalPresentationStyle = .fullScreen
-        contrller.modalTransitionStyle = .coverVertical
-        present(contrller, animated: true)
+            showDeleteAlert()
     }
-    
+    func showDeleteAlert() {
+        let alertController = UIAlertController(title: "Delete User", message: "Are you sure you want to delete this user, you will loose your tickets and account?", preferredStyle: .alert)
+        
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { (action) in
+            self.deleteUserFromDatabase(username: self.getUsername()!)
+            self.deleteAllTickets()
+            let contrller = self.storyboard?.instantiateViewController(withIdentifier: "LoginNC") as! UINavigationController
+            contrller.modalPresentationStyle = .fullScreen
+            contrller.modalTransitionStyle = .coverVertical
+            self.present(contrller, animated: true)
+
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addAction(deleteAction)
+        alertController.addAction(cancelAction)
+        
+        if let deleteButton = alertController.actions.first(where: { $0.title == "Delete" }) {
+            deleteButton.setValue(UIColor.red, forKey: "titleTextColor")
+        }
+        
+        present(alertController, animated: true, completion: nil)
+    }
     func getUsername() -> String? {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return nil
@@ -67,6 +86,38 @@ class ProfileViewController: UIViewController {
             print("Fetch error: \(error), \(error.userInfo)")
         }
         return nil
+    }
+    
+    func deleteUserFromDatabase(username: String) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        fetchRequest.predicate = NSPredicate(format: "username = %@", username)
+        do {
+            let result = try managedContext.fetch(fetchRequest)
+            for data in result as! [NSManagedObject] {
+                managedContext.delete(data)
+            }
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Delete error: \(error), \(error.userInfo)")
+        }
+    }
+    
+    func deleteAllTickets() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Tickets")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        do {
+            try managedContext.execute(deleteRequest)
+        } catch let error as NSError {
+            print("Delete error: \(error), \(error.userInfo)")
+        }
     }
 
     

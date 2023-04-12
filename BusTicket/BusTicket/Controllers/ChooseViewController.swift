@@ -14,9 +14,8 @@ class ChooseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var findTicketsButton: UIButton!
     @IBOutlet weak var datePic: UIDatePicker!
-    
-    @IBOutlet weak var fromButton: UIButton!
-    @IBOutlet weak var toButton: UIButton!
+    @IBOutlet weak var toLabelTOChoose: UILabel!
+    @IBOutlet weak var fromLabelToChoose: UILabel!
     
     let city1PickerView = UIPickerView()
     let subView = UIView()
@@ -25,7 +24,6 @@ class ChooseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
     var choosenToCity : String?
     
     var isFromButtonClicked : Bool = false
-    
     var isOkeyToFindTickets = false
     
     let cities = ["Adana", "Adıyaman", "Afyonkarahisar", "Ağrı", "Aksaray", "Amasya", "Ankara", "Antalya", "Ardahan", "Artvin", "Aydın", "Balıkesir", "Bartın", "Batman", "Bayburt", "Bilecik", "Bingöl", "Bitlis", "Bolu", "Burdur", "Bursa", "Çanakkale", "Çankırı", "Çorum", "Denizli", "Diyarbakır", "Düzce", "Edirne", "Elazığ", "Erzincan", "Erzurum", "Eskişehir", "Gaziantep", "Giresun", "Gümüşhane", "Hakkâri", "Hatay", "Iğdır", "Isparta", "İstanbul", "İzmir", "Kahramanmaraş", "Karabük", "Karaman", "Kars", "Kastamonu", "Kayseri", "Kırıkkale", "Kırklareli", "Kırşehir", "Kilis", "Kocaeli", "Konya", "Kütahya", "Malatya", "Manisa", "Mardin", "Mersin", "Muğla", "Muş", "Nevşehir", "Niğde", "Ordu", "Osmaniye", "Rize", "Sakarya", "Samsun", "Siirt", "Sinop", "Sivas", "Şanlıurfa", "Şırnak", "Tekirdağ", "Tokat", "Trabzon", "Tunceli", "Uşak", "Van", "Yalova", "Yozgat", "Zonguldak"]
@@ -33,20 +31,15 @@ class ChooseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.hidesBackButton = true
-        datePic.minimumDate = .now
-        
-
-        configureDropDowns()
-        
-        // Do any additional setup after loading the view.
+    
+        configureView()
     }
     
     
-    
-    
-    
-    func configureDropDowns(){
+    func configureView(){
+        navigationItem.hidesBackButton = true
+        datePic.minimumDate = .now
+        
         fromLabel.layer.cornerRadius = fromLabel.frame.height / 4
         fromLabel.layer.masksToBounds = true
         toLabel.layer.cornerRadius = toLabel.frame.height / 4
@@ -67,11 +60,8 @@ class ChooseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
 
         city1PickerView.delegate = self
         city1PickerView.dataSource = self
-        let blurEffect = UIBlurEffect(style: .regular)
-        let visualEffectView = UIVisualEffectView(effect: blurEffect)
-
+        
         view.addSubview(subView)
-        view.addSubview(visualEffectView)
         subView.addSubview(toolbar)
         view.addSubview(city1PickerView)
         
@@ -116,7 +106,7 @@ class ChooseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
             if(selectedCity == choosenToCity){
                 showAlert(with: "Choose another city", title: "You can not choos same city")
             }else{
-                fromButton.titleLabel?.text = selectedCity
+                fromLabelToChoose.text = selectedCity
                 isFromButtonClicked = false
                 self.subView.isHidden = true
                 self.city1PickerView.isHidden = true
@@ -126,7 +116,7 @@ class ChooseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
             if(selectedCity == choosenFromCity){
                 showAlert(with: "Choose another city", title: "You can not choos same city")
             }else{
-                toButton.titleLabel?.text = selectedCity
+                toLabelTOChoose.text = selectedCity
                 isFromButtonClicked = false
                 self.subView.isHidden = true
                 self.city1PickerView.isHidden = true
@@ -160,25 +150,19 @@ class ChooseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
     }
     
     @IBAction func onDateChanged(_ sender: Any) {
-        
-        let calendar = Calendar.current
-        let day = calendar.component(.day, from: datePic.date)
-        let month = calendar.component(.month, from: datePic.date)
-        let year = calendar.component(.year, from: datePic.date)
-        print("\(day) - \(month) - \(year)")
+
     }
     
     func showAlert(with message: String, title: String) {
         let alert = UIAlertController(title: title,message: message,preferredStyle: .alert)
-        
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(okAction)
-        
         present(alert, animated: true, completion: nil)
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let calendar = Calendar.current
-        if segue.identifier == "showSecondViewControllerSegue" {
+        if segue.identifier == SegueIdentifiers.goToTripsPage.rawValue {
             
             if let tabBarController = segue.destination as? TabBarViewController{
                 tabBarController.fromCity = choosenFromCity
@@ -192,27 +176,14 @@ class ChooseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if identifier == "showSecondViewControllerSegue"{
+        if identifier == SegueIdentifiers.goToTripsPage.rawValue {
             if(isOkeyToFindTickets){
                 return true
             }
         }
         return false
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let calendar = Calendar.current
-//
-//        if segue.identifier == "ShowTabbar" {
-//            if let tripsViewController = segue.destination as? TabBarViewController {
-//                tripsViewController.fromCity = choosenFromCity
-//                tripsViewController.toCity = choosenToCity
-//                tripsViewController.day = calendar.component(.day, from: datePic.date)
-//                tripsViewController.month = calendar.component(.month, from: datePic.date)
-//                tripsViewController.year = calendar.component(.year, from: datePic.date)
-//            }
-//        }
-//    }
+
     
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

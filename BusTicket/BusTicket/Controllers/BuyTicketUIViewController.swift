@@ -28,7 +28,7 @@ class BuyTicketUIViewController: UIViewController, UINavigationControllerDelegat
     @IBOutlet weak var seatNumbersLabel: UILabel!
     @IBOutlet weak var companyImageView: UIImageView!
     
-    
+    // For segue
     var seatNumbers : String?
     var userId : String?
     var date : String?
@@ -42,17 +42,10 @@ class BuyTicketUIViewController: UIViewController, UINavigationControllerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = ""
-        nameTextField.addTarget(self, action: #selector(onTextChanged), for: .editingChanged)
-        approveButton.layer.cornerRadius = 10
-        approveButton.layer.masksToBounds = false
-        approveButton.layer.shadowColor = UIColor.black.cgColor
-        approveButton.layer.shadowOffset = CGSize(width: 0, height: 0)
-        approveButton.layer.shadowOpacity = 0.3
-        approveButton.layer.shadowRadius = 10
-    }        // Do any additional setup after loading the view.
+       configure()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
-        
         seatNumbersLabel.text = seatNumbers
         userIdLabel.text = userId
         dateLabel.text = date
@@ -61,9 +54,19 @@ class BuyTicketUIViewController: UIViewController, UINavigationControllerDelegat
         fromCityLabel.text = fromCity
         toCityLabel.text = toCity
         companyImageView.image = companyImage
-        
-
     }
+    
+    func configure(){
+        nameLabel.text = ""
+        nameTextField.addTarget(self, action: #selector(onTextChanged), for: .editingChanged)
+        approveButton.layer.cornerRadius = 10
+        approveButton.layer.masksToBounds = false
+        approveButton.layer.shadowColor = UIColor.black.cgColor
+        approveButton.layer.shadowOffset = CGSize(width: 0, height: 0)
+        approveButton.layer.shadowOpacity = 0.3
+        approveButton.layer.shadowRadius = 10
+    }
+    
     @objc func onTextChanged() {
         nameLabel.text = nameTextField.text
     }
@@ -72,14 +75,11 @@ class BuyTicketUIViewController: UIViewController, UINavigationControllerDelegat
         let result = checkTextFields()
         if(result){
             saveTicket()
-            showSuccessAnimation()
         }
     }
     func showSuccessAnimation() {
-        // Başarılı animasyonu yükle
         let animationView = LottieAnimationView(name: "done")
         
-        // Animasyon boyutunu ayarla ve konumlandır
         animationView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
         animationView.center = view.center
         animationView.backgroundColor = .white
@@ -89,11 +89,9 @@ class BuyTicketUIViewController: UIViewController, UINavigationControllerDelegat
         animationView.layer.shadowOpacity = 0.5
         animationView.layer.shadowRadius = 5
         animationView.layer.masksToBounds = false
-        
-        // Animasyon tekrar oynamasın
+    
         animationView.loopMode = .playOnce
         
-        // Animasyonu ekranda göster
         view.addSubview(animationView)
         animationView.play { isFinished in
             self.navigationController?.popViewController(animated: true)
@@ -121,6 +119,7 @@ class BuyTicketUIViewController: UIViewController, UINavigationControllerDelegat
         
         do {
             try managedContext.save()
+            showSuccessAnimation()
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }

@@ -18,8 +18,17 @@ class MyTicketsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tickets = getTickets()
+        setAnimation()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        tickets = getTickets()
+        collectionView.reloadData()
+        showEmptyAnimation()
+    }
+    
+    func setAnimation(){
         animationView.isHidden = false
-        
+
         // Animasyon boyutunu ayarla ve konumlandır
         animationView.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
         animationView.center = view.center
@@ -31,11 +40,6 @@ class MyTicketsViewController: UIViewController {
         animationView.play()
         showEmptyAnimation()
         // Do any additional setup after loading the view.
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        tickets = getTickets()
-        collectionView.reloadData()
-        showEmptyAnimation()
     }
     
     func getTickets() -> [TicketDataBase] {
@@ -80,6 +84,8 @@ class MyTicketsViewController: UIViewController {
     @IBAction func onDeleteButtonClicked(_ sender: UIButton) {
         showDeleteAlert(forIndex: sender.tag)
     }
+    
+    
     func showDeleteAlert(forIndex index: Int) {
         let alertController = UIAlertController(title: "Delete Ticket", message: "Are you sure you want to delete this ticket?", preferredStyle: .alert)
         
@@ -134,12 +140,4 @@ extension MyTicketsViewController: UICollectionViewDelegate, UICollectionViewDat
         
         return cell
     }
-    
-//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-//        let width = scrollView.frame.width
-//
-//        currentPage = Int(scrollView.contentOffset.x/(width-50))
-//        pageControl.currentPage = currentPage
-//    }
-    
 }

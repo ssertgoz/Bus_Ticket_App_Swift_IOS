@@ -28,15 +28,7 @@ class TabBarViewController: UITabBarController {
                 tripsViewController.day = self.day
                 tripsViewController.month = self.month
                 tripsViewController.year = self.year
-                
-                }
-            
+            }
         }
-        
-        
     }
-  
-
-
-
 }

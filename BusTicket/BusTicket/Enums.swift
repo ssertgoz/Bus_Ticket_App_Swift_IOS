@@ -37,3 +37,8 @@ enum CompanyImages : String{
         return nil
     }
 }
+
+enum SegueIdentifiers : String{
+    case goToPaymentPage = "paymentSegue"
+    case goToTripsPage = "showSecondViewControllerSegue"
+}

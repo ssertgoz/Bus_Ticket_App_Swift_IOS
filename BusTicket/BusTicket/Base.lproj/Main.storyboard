@@ -110,7 +110,6 @@
                                         <connections>
                                             <outlet property="lottiAnimationView" destination="29Z-ml-otM" id="rJ6-Mx-PKs"/>
                                             <outlet property="slideDescriptionLabel" destination="EUk-Iw-ynP" id="TKk-Ee-M1c"/>
-                                            <outlet property="slideImageView" destination="Drp-0N-sKi" id="c4v-Fh-cnj"/>
                                             <outlet property="slideTitleLabel" destination="NLi-Re-Gic" id="xIe-Aq-WGM"/>
                                         </connections>
                                     </collectionViewCell>
@@ -1255,9 +1254,8 @@
                                 </constraints>
                                 <color key="tintColor" red="0.0" green="0.65098039220000004" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Choose City" subtitle="">
-                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
-                                    <color key="baseForegroundColor" red="0.0" green="0.65098039220000004" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <buttonConfiguration key="configuration" style="plain" subtitle="">
+                                    <attributedString key="attributedTitle"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="fromButtonClicked:" destination="EBY-WN-UZI" eventType="touchUpInside" id="Zaz-ta-J58"/>
@@ -1271,14 +1269,19 @@
                                 </constraints>
                                 <color key="tintColor" red="0.0" green="0.65098039220000004" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Choose City" subtitle="">
-                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
-                                    <color key="baseForegroundColor" red="0.0" green="0.65098039220000004" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <buttonConfiguration key="configuration" style="plain" subtitle="">
+                                    <attributedString key="attributedTitle"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="toButtonClicked:" destination="EBY-WN-UZI" eventType="touchUpInside" id="2et-tn-EMb"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gG8-yU-rc6">
+                                <rect key="frame" x="26" y="497.66666666666669" width="226" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <datePicker opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="8Pt-VD-eFf" userLabel="Date Pic">
                                 <rect key="frame" x="0.0" y="581" width="125" height="34.333333333333371"/>
                                 <color key="tintColor" red="0.0" green="0.65098039220000004" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1290,12 +1293,21 @@
                                     <action selector="onDateChanged:" destination="EBY-WN-UZI" eventType="valueChanged" id="Oyz-zU-L4A"/>
                                 </connections>
                             </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEF-85-D0w">
+                                <rect key="frame" x="26" y="380.66666666666669" width="226" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Xzb-ZS-8hN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="gG8-yU-rc6" firstAttribute="trailing" secondItem="FEF-85-D0w" secondAttribute="trailing" id="4Li-p5-qOe"/>
                             <constraint firstItem="tLW-YG-Scb" firstAttribute="leading" secondItem="Xzb-ZS-8hN" secondAttribute="leading" constant="16" id="4xV-T6-OER"/>
                             <constraint firstItem="Xzb-ZS-8hN" firstAttribute="trailing" secondItem="T7J-nm-VGf" secondAttribute="trailing" constant="131" id="6xn-fF-JvD"/>
+                            <constraint firstItem="Xzb-ZS-8hN" firstAttribute="trailing" secondItem="FEF-85-D0w" secondAttribute="trailing" constant="138" id="9Vz-rg-BiA"/>
+                            <constraint firstItem="gG8-yU-rc6" firstAttribute="leading" secondItem="FEF-85-D0w" secondAttribute="leading" id="EEy-pD-qeG"/>
                             <constraint firstItem="T7J-nm-VGf" firstAttribute="leading" secondItem="Xzb-ZS-8hN" secondAttribute="leading" constant="16" id="F8S-Dc-etb"/>
                             <constraint firstItem="tLW-YG-Scb" firstAttribute="top" secondItem="Xzb-ZS-8hN" secondAttribute="top" constant="240" id="Fxf-1j-iJp"/>
                             <constraint firstItem="ecx-HM-Kra" firstAttribute="top" secondItem="T7J-nm-VGf" secondAttribute="bottom" constant="50" id="INZ-iI-YT9"/>
@@ -1310,10 +1322,13 @@
                             <constraint firstItem="jPV-eW-HpZ" firstAttribute="top" secondItem="ecx-HM-Kra" secondAttribute="bottom" constant="8" symbolic="YES" id="XB9-oo-Dkb"/>
                             <constraint firstItem="Xzb-ZS-8hN" firstAttribute="trailing" secondItem="yFy-XK-f7k" secondAttribute="trailing" constant="58" id="ZRM-vw-vRB"/>
                             <constraint firstItem="Xzb-ZS-8hN" firstAttribute="trailing" secondItem="oXv-sd-ege" secondAttribute="trailing" constant="299" id="ZpS-XD-i7l"/>
+                            <constraint firstItem="FEF-85-D0w" firstAttribute="centerY" secondItem="T7J-nm-VGf" secondAttribute="centerY" id="bDo-Wv-2az"/>
+                            <constraint firstItem="FEF-85-D0w" firstAttribute="leading" secondItem="Xzb-ZS-8hN" secondAttribute="leading" constant="26" id="c4k-aO-nkx"/>
                             <constraint firstItem="Xzb-ZS-8hN" firstAttribute="trailing" secondItem="jPV-eW-HpZ" secondAttribute="trailing" constant="131" id="f4N-qI-UH6"/>
                             <constraint firstItem="Xzb-ZS-8hN" firstAttribute="trailing" secondItem="8Pt-VD-eFf" secondAttribute="trailing" constant="265" id="mgU-ux-zi9"/>
                             <constraint firstItem="8Pt-VD-eFf" firstAttribute="leading" secondItem="3FK-hF-Vno" secondAttribute="leading" id="mrK-Tp-p24"/>
                             <constraint firstItem="3FK-hF-Vno" firstAttribute="top" secondItem="K2n-36-Pu0" secondAttribute="top" id="pl8-XM-UY0"/>
+                            <constraint firstItem="gG8-yU-rc6" firstAttribute="centerY" secondItem="jPV-eW-HpZ" secondAttribute="centerY" id="qaz-7q-aJM"/>
                             <constraint firstItem="oXv-sd-ege" firstAttribute="top" secondItem="jPV-eW-HpZ" secondAttribute="bottom" constant="38" id="rVJ-fJ-1Re"/>
                             <constraint firstItem="yFy-XK-f7k" firstAttribute="leading" secondItem="Xzb-ZS-8hN" secondAttribute="leading" constant="58" id="vKp-re-E9w"/>
                             <constraint firstItem="Xzb-ZS-8hN" firstAttribute="trailing" secondItem="ecx-HM-Kra" secondAttribute="trailing" constant="299" id="waI-De-xIu"/>
@@ -1326,10 +1341,10 @@
                         <outlet property="dateLabel" destination="oXv-sd-ege" id="DRQ-iN-Dzg"/>
                         <outlet property="datePic" destination="8Pt-VD-eFf" id="tUH-23-pHC"/>
                         <outlet property="findTicketsButton" destination="yFy-XK-f7k" id="t5x-PC-TU9"/>
-                        <outlet property="fromButton" destination="T7J-nm-VGf" id="NI0-16-9sL"/>
                         <outlet property="fromLabel" destination="tLW-YG-Scb" id="KEj-cv-Pj0"/>
-                        <outlet property="toButton" destination="jPV-eW-HpZ" id="wbN-t6-0fe"/>
+                        <outlet property="fromLabelToChoose" destination="FEF-85-D0w" id="uMd-v7-MdW"/>
                         <outlet property="toLabel" destination="ecx-HM-Kra" id="yPE-KK-bVz"/>
+                        <outlet property="toLabelTOChoose" destination="gG8-yU-rc6" id="hod-Ip-eFF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EK1-el-GPs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
