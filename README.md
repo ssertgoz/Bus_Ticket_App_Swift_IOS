@@ -1,5 +1,5 @@
 
-# Bus Ticket Booking App
+# Bus Ticket Booking App (SwiftPass)
 
 This is a simple iOS app that allows users to book bus tickets for different routes. 
 
