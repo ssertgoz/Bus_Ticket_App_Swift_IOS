@@ -24,39 +24,39 @@ This is a simple iOS app that allows users to book bus tickets for different rou
 
 ## Screenshots
 
-![OnBoarding Screen](/screenshots/1.png "OnBoarding Screen")
+![OnBoarding Screen](ScreenShots/1.png "OnBoarding Screen")
 
-![OnBoarding Screen](/screenshots/2.png "OnBoarding Screen")
+![OnBoarding Screen](ScreenShots/2.png "OnBoarding Screen")
 
-![OnBoarding Details Screen](/screenshots/3.png "Ticket Details Screen")
+![OnBoarding Details Screen](ScreenShots/3.png "Ticket Details Screen")
 
-![Login Screen](/screenshots/4.png "Login Screen")
+![Login Screen](ScreenShots/4.png "Login Screen")
 
-![Signup Screen](/screenshots/5.png "Signup Screen")
+![Signup Screen](ScreenShots/5.png "Signup Screen")
 
-![Login Fail Screen](/screenshots/6.png "Login Fail Screen")
+![Login Fail Screen](ScreenShots/6.png "Login Fail Screen")
 
-![Choose Route and Date Screen](/screenshots/7.png "Choose Route and Date Screen")
+![Choose Route and Date Screen](ScreenShots/7.png "Choose Route and Date Screen")
 
-![Tickets Screen](/screenshots/8.png "Tickets Screen")
+![Tickets Screen](ScreenShots/8.png "Tickets Screen")
 
-![Ticket Details Screen](/screenshots/9.png "Ticket Details Screen")
+![Ticket Details Screen](ScreenShots/9.png "Ticket Details Screen")
 
-![Ticket Details Screen](/screenshots/10.png "Ticket Details Screen")
+![Ticket Details Screen](ScreenShots/10.png "Ticket Details Screen")
 
-![Ticket Details Screen](/screenshots/11.png "Ticket Details Screen")
+![Ticket Details Screen](ScreenShots/11.png "Ticket Details Screen")
 
-![Booking Screen](/screenshots/12.png "Booking Screen")
+![Booking Screen](ScreenShots/12.png "Booking Screen")
 
-![Payment Approved Screen](/screenshots/13.png "Payment Approved Screen")
+![Payment Approved Screen](ScreenShots/13.png "Payment Approved Screen")
 
-![My Tickets Screen](/screenshots/14.png "My Tickets Screen")
+![My Tickets Screen](ScreenShots/14.png "My Tickets Screen")
 
-![My Tickets Details Screen](/screenshots/15.png "My Tickets Screen")
+![My Tickets Details Screen](ScreenShots/15.png "My Tickets Screen")
 
-![My Tickets Screen](/screenshots/16.png "My Tickets Screen")
+![My Tickets Screen](ScreenShots/16.png "My Tickets Screen")
 
-![Profile Screen](/screenshots/17.png "Profile Screen")
+![Profile Screen](ScreenShots/17.png "Profile Screen")
 
 
 ## Contributing
